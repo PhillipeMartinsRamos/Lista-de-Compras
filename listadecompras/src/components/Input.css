@@ -39,7 +39,11 @@ input[type="number"] {
   font-size: 24px;
   font-weight: 600;
   border: none;
-  box-shadow: 3px 3px 0.5px 0.5px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button:active{
+  transform: scale(95%);
 }
 
 .label-item,
@@ -51,7 +55,7 @@ input[type="number"] {
   background-color: #eacab7;
   border-radius: 15px;
   color: #ac5151;
-  box-shadow: 3px 3px 0.5px 0.5px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .label-value {
@@ -64,7 +68,7 @@ input[type="number"] {
     background-color: #eacab7;
     border-radius: 15px;
     color: #ac5151;
-    box-shadow: 3px 3px 0.5px 0.5px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   }
 
   .label-value::before {
