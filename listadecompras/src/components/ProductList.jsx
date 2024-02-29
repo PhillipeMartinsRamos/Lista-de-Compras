@@ -4,6 +4,7 @@ const ProductList = ({ productList }) => {
     let total = 0
 
   return (
+    
     <div className="table">
       <div className="table-title">
         <ul>
@@ -22,7 +23,7 @@ const ProductList = ({ productList }) => {
         {productList.map((item) => {
             total += (item.qty * item.price)
             return(
-          <ul key={item.id}>
+          <ul key={item.id} className='list-row'>
             <li className='
             name'>{item.item}</li>
             <li className='
@@ -38,7 +39,7 @@ const ProductList = ({ productList }) => {
       </div>
       <div className="table-result">
         <h2>Valor Total:</h2>
-        <p>{total.toFixed(2)}</p>
+        <p>€ {total.toFixed(2)}</p>
       </div>
     </div>
   );
