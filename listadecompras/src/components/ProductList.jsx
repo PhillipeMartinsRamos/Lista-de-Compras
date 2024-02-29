@@ -1,6 +1,6 @@
 import './ProductList.css'
 
-const ProductList = ({ productList }) => {
+const ProductList = ({ productList, handleDelete }) => {
     let total = 0
 
   return (
@@ -32,8 +32,7 @@ const ProductList = ({ productList }) => {
             qty'>{item.qty}</li>
             <li className='
             total'>{(item.qty*item.price).toFixed(2)}</li>
-            <li className='
-            delete'><button>x</button></li>
+            <li className='delete'><button onClick={()=>handleDelete(item.id)}>x</button></li>
           </ul> 
         )})}
       </div>
