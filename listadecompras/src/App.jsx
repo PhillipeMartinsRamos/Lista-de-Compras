@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h1 className='title'>Lista de Compras</h1>
+      <h1 className='title'>Lista de Compras - Alex e Lipe</h1>
       <div className='form-container'>
         {/* aqui ficam os inputs */}
         <Input  handleSubmit={handleSubmit} setItem={setItem} setPrice={setPrice} setQty={setQty} item={item} price={price} qty={qty} />
