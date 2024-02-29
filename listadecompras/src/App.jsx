@@ -69,7 +69,7 @@ function App() {
         {/* aqui fica a lista */}
         {shoppingList && <ProductList productList={shoppingList} handleDelete={handleDelete} />}
       </div>
-      <button onClick={() => localStorage.clear()}>Limpar Lista</button>
+      <button onClick={() => setShoppingList([])}>Limpar Lista</button>
     </div>
     
   );
