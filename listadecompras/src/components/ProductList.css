@@ -1,0 +1,66 @@
+ul{
+    list-style: none;
+    background-color: aquamarine;
+}
+
+.name{
+    width: 30%;
+    text-align: left;
+}
+.price{
+    width: 25%;
+    text-align: right;
+}
+.qty{
+    width: 15%;
+    text-align: right;
+}
+.total{
+    width: 15%;
+    text-align: right;
+}
+.empty{
+    width: 10%;
+}
+
+.delete{
+    width: 10%;
+}
+
+.delete button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #df6666;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-title ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.table-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.table-content ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.table-result ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

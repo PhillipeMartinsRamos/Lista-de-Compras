@@ -1,0 +1,22 @@
+{
+    "shopping-list": [
+        {
+            "id": "2121",
+            "item": "Arroz Basmati",
+            "price": 2.08,
+            "qty": 2
+        },
+        {
+            "id": "1515",
+            "item": "Milka Ao Leite",
+            "price": 1.39,
+            "qty": 1
+        },
+        {
+            "id": "4278",
+            "item": "Bifanas",
+            "price": 3.49,
+            "qty": 0.895
+        }
+    ]
+}
