@@ -1,6 +1,8 @@
 .App{
     max-width: 430px;
-    padding:  20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -14,4 +16,19 @@
 
 .list-container {
     margin-top: 40px;
+}
+
+.clearList{
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: #272727;
+    color: white;
+    font-weight: 700;
+    width: fit-content;
+    align-self: center;
+}
+
+.clearList:active{
+    transform: scale(95%);
 }

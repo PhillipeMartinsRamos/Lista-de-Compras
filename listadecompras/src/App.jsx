@@ -2,14 +2,11 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Input from "./components/Input";
 import ProductList from "./components/ProductList";
-import uniqid from "uniqid"
+import uniqid from "uniqid";
 
 function App() {
-
   // getting the stored list from localstorage
-  const storedList = JSON.parse(localStorage.getItem("list"))
-  ;
-
+  const storedList = JSON.parse(localStorage.getItem("list"));
   // saving the stored list or creating an empty list
   const [shoppingList, setShoppingList] = useState(
     storedList ? storedList : []
@@ -34,7 +31,7 @@ function App() {
       qty: qty,
     };
 
-    setShoppingList([...shoppingList, addedItems])
+    setShoppingList([...shoppingList, addedItems]);
 
     setItem("");
     setPrice("");
@@ -43,12 +40,9 @@ function App() {
     console.log(addedItems);
   };
 
-  const handleDelete = (id)=> {
-
-    setShoppingList(shoppingList.filter((item)=>item.id !== id))
-
-    
-  }
+  const handleDelete = (id) => {
+    setShoppingList(shoppingList.filter((item) => item.id !== id));
+  };
 
   return (
     <div className="App">
@@ -67,11 +61,14 @@ function App() {
       </div>
       <div className="list-container">
         {/* aqui fica a lista */}
-        {shoppingList && <ProductList productList={shoppingList} handleDelete={handleDelete} />}
+        {shoppingList && (
+          <ProductList productList={shoppingList} handleDelete={handleDelete} />
+        )}
       </div>
-      <button onClick={() => setShoppingList([])}>Limpar Lista</button>
+      <button className="clearList" onClick={() => setShoppingList([])}>
+          Limpar Lista
+        </button>
     </div>
-    
   );
 }
 
