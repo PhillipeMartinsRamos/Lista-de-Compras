@@ -5,8 +5,8 @@ const ProductList = ({ productList, handleDelete }) => {
 
   return (
     
-    <div className="table">
-      <div className="table-title">
+    <div className="t2able">
+      <div className="table-title listStatus">
         <ul>
             <li className='
             name'>Produto</li>

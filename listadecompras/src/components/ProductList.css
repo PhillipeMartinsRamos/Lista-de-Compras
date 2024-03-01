@@ -1,48 +1,48 @@
-.list-row{
-    list-style: none;
-    background-color: #F1DACC;
-    padding: 20px 5px 20px 15px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+.list-row {
+  list-style: none;
+  background-color: #f1dacc;
+  padding: 20px 5px 20px 15px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.name{
-    width: 30%;
-    text-align: left;
+.name {
+  width: 30%;
+  text-align: left;
 }
-.price{
-    width: 25%;
-    text-align: right;
+.price {
+  width: 25%;
+  text-align: right;
 }
-.qty{
-    width: 15%;
-    text-align: right;
+.qty {
+  width: 15%;
+  text-align: right;
 }
-.total{
-    width: 15%;
-    text-align: right;
+.total {
+  width: 15%;
+  text-align: right;
 }
-.empty{
-    width: 10%;
-}
-
-.delete{
-    width: 10%;
+.empty {
+  width: 10%;
 }
 
-.delete button{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: none;
-    background-color: #B44F13;
-    color: white;
-    font-weight:bolder;
-    font-size: 22px;
-    padding-bottom: 2px;
+.delete {
+  width: 10%;
 }
-.delete button:active{
-    transform: scale(95%);
+
+.delete button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #b44f13;
+  color: white;
+  font-weight: bolder;
+  font-size: 22px;
+  padding-bottom: 2px;
+}
+.delete button:active {
+  transform: scale(95%);
 }
 
 .table {
@@ -51,23 +51,25 @@
 }
 
 .table-title ul {
-    list-style: none;
+  list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-weight: 500;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   padding: 20px 5px 20px 15px;
-  border-radius: 15px 15px 0 0;
+  border-radius: 15px;
   transform: translateY(15px);
   z-index: 1;
+  position: relative;
 }
 
-.table-content{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 2;
+.table-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+  position: relative;
 }
 
 .table-content ul {
@@ -77,25 +79,29 @@
 }
 
 .table-result {
+  z-index: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #EACAB7;
-  border-radius: 0 0 15px 15px;
-  padding:24px 20px 5px 20px;
+  background-color: #eacab7;
+  border-radius: 15px;
+  padding: 24px 20px 5px 20px;
   transform: translateY(-15px);
 }
 
-.table-result h2{
-    color: #B52929;
-    font-weight: 600;
-    font-size: 24px;
-    z-index: 0;
-
+.table-result h2 {
+  color: #b52929;
+  font-weight: 600;
+  font-size: 24px;
+  z-index: 0;
 }
 
-.table-result p{
-    font-weight: 600;
-    font-size: 48px;
+.table-result p {
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.emptyList {
+  transform: translateY();
 }
