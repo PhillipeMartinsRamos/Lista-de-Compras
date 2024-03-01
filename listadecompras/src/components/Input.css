@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: form 0.5s ease;
+  /* animation: form 0.5s ease; */
 }
 
 .form label {
@@ -43,6 +43,13 @@ input[type="number"] {
   font-size: 24px !important;
 }
 
+@keyframes button{
+  0%{
+    opacity: 0%;
+    transform: scale(130%) translateY(-100px);
+  }
+}
+
 .button {
   margin-top: 10px;
   padding: 10px 50px;
@@ -53,10 +60,27 @@ input[type="number"] {
   font-weight: 600;
   border: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  animation: button 1s ease;
 }
 
 .button:active{
   transform: scale(95%);
+}
+
+@keyframes inputs{
+  0%{
+    opacity: 0;
+    transform: scale(50%)
+  }
+}
+
+.label-item{
+  animation: inputs 0.33s ease;
+
+}
+
+.label-quantity{
+  animation: inputs 0.66s ease;
 }
 
 .label-item,
@@ -69,6 +93,7 @@ input[type="number"] {
   border-radius: 15px;
   color: #ac5151;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  
 }
 
 .label-value {
@@ -82,6 +107,7 @@ input[type="number"] {
     border-radius: 15px;
     color: #ac5151;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    animation: inputs 1s ease;
   }
 
   .label-value::before {

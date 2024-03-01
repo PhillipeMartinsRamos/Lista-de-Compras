@@ -1,9 +1,17 @@
+@keyframes list-row{
+  0%{
+    opacity: 0%;
+    transform: scale(50%);
+  }
+}
+
 .list-row {
   list-style: none;
   background-color: #f1dacc;
   padding: 20px 5px 20px 15px;
   border-radius: 15px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  animation: list-row 0.5s ease;
 }
 
 .name {
@@ -59,6 +67,8 @@
   animation: table 0.5s ease;
 }
 
+
+
 .table-title ul {
   list-style: none;
   display: flex;
@@ -71,6 +81,7 @@
   transform: translateY(15px);
   z-index: 1;
   position: relative;
+  
 }
 
 .table-content {
@@ -109,8 +120,4 @@
 .table-result p {
   font-weight: 600;
   font-size: 48px;
-}
-
-.emptyList {
-  transform: translateY();
 }

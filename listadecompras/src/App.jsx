@@ -24,14 +24,14 @@ function App() {
   // function to store the value inside shoppingList
   const handleSubmit = (e) => {
 
-    
+
 
     e.preventDefault();
     const addedItems = {
       id: uniqid(),
       item: item,
-      price: price.replace(",", "."),
-      qty: qty.replace(",", "."),
+      price: price[0] === "," || price[0] === "." ? 0 + price.replace(",", ".") : price.replace(",", "."),
+      qty: qty[0] === "," || qty[0] === "." ? 0 + qty.replace(",", ".") : qty.replace(",", "."),
     };
 
     setShoppingList([...shoppingList, addedItems]);

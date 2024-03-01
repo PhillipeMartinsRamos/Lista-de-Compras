@@ -6,7 +6,7 @@ const ProductList = ({ productList, handleDelete }) => {
   return (
     
     <div className="table">
-      <div className="table-title listStatus">
+      <div className="table-title">
         <ul>
             <li className='
             name'>Produto</li>
