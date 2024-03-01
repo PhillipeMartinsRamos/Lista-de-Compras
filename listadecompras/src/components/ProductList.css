@@ -45,9 +45,18 @@
   transform: scale(95%);
 }
 
+@keyframes table {
+  0%{
+    opacity: 0%;
+    transform: translateY(200px);
+  }
+  
+}
+
 .table {
   display: flex;
   flex-direction: column;
+  animation: table 0.5s ease;
 }
 
 .table-title ul {

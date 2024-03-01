@@ -1,8 +1,21 @@
+@keyframes form {
+  0%{
+    opacity: 0%;
+    
+  }
+
+  50%{
+    opacity: 0%;
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  
+}
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: form 0.5s ease;
 }
 
 .form label {

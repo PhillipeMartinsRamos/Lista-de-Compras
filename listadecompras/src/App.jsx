@@ -23,6 +23,9 @@ function App() {
 
   // function to store the value inside shoppingList
   const handleSubmit = (e) => {
+
+    
+
     e.preventDefault();
     const addedItems = {
       id: uniqid(),

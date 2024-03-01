@@ -4,6 +4,14 @@
     display: flex;
     flex-direction: column;
 }
+@keyframes title {
+    0%{
+        opacity: 0%;
+        transform: translateY(-20px) rotate3d(1, 0, 0, 90deg);
+
+    }
+    
+}
 
 .title {
     font-size: 60px;
@@ -12,10 +20,22 @@
     font-weight: 600;
     text-transform: lowercase;
     margin-bottom: 20px;
+    animation: title 0.5s ease;
 }
 
 .list-container {
     margin-top: 40px;
+}
+
+@keyframes clearList {
+    0%{
+        opacity: 0%;
+    }
+
+    50%{
+        opacity: 0%;
+        transform: translateY(150px);
+    }
 }
 
 .clearList{
@@ -27,6 +47,7 @@
     font-weight: 700;
     width: fit-content;
     align-self: center;
+    animation: clearList 1s ease
 }
 
 .clearList:active{
