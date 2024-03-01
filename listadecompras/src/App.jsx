@@ -27,8 +27,8 @@ function App() {
     const addedItems = {
       id: uniqid(),
       item: item,
-      price: price,
-      qty: qty,
+      price: price.replace(",", "."),
+      qty: qty.replace(",", "."),
     };
 
     setShoppingList([...shoppingList, addedItems]);
