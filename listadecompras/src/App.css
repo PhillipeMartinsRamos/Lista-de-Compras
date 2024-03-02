@@ -1,6 +1,6 @@
 .App{
     max-width: 430px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -14,9 +14,9 @@
 }
 
 .title {
-    font-size: 60px;
+    font-size: 48px;
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
     font-weight: 600;
     text-transform: lowercase;
     margin-bottom: 20px;
@@ -52,4 +52,14 @@
 
 .clearList:active{
     transform: scale(95%);
+}
+
+.footer{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #b44f13;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px;
 }

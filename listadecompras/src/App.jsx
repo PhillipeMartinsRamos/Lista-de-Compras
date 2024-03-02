@@ -23,15 +23,25 @@ function App() {
 
   // function to store the value inside shoppingList
   const handleSubmit = (e) => {
-
-
-
     e.preventDefault();
+
+    let convertedPrice = price[0] === "," || price[0] === "." ? 0 + price.replace(",", ".") : price.replace(",", ".")
+    if(convertedPrice[convertedPrice.length - 1] === "."){
+      convertedPrice = `${convertedPrice}00`
+    }
+    if(!convertedPrice.includes(".")){
+      convertedPrice = `${convertedPrice}.00`
+      
+    }
+    if(convertedPrice[convertedPrice.length - 2] === "."){
+      convertedPrice = `${convertedPrice}0`
+    }
+
     const addedItems = {
       id: uniqid(),
       item: item,
-      price: price[0] === "," || price[0] === "." ? 0 + price.replace(",", ".") : price.replace(",", "."),
-      qty: qty[0] === "," || qty[0] === "." ? 0 + qty.replace(",", ".") : qty.replace(",", "."),
+      price: convertedPrice,
+      qty: qty[0] === "," || qty[0] === "." ? 0 + qty.replace(",", ".") : qty.replace(",", ".")
     };
 
     setShoppingList([...shoppingList, addedItems]);
@@ -71,6 +81,8 @@ function App() {
       <button className="clearList" onClick={() => setShoppingList([])}>
           Limpar Lista
         </button>
+
+        <p className="footer">Desenvolvido por Alex e Lipe</p>
     </div>
   );
 }
