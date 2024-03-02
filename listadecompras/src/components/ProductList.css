@@ -118,6 +118,7 @@
   gap: 10px;
   z-index: 2;
   position: relative;
+  align-items: center;
 }
 
 .table-content ul {
