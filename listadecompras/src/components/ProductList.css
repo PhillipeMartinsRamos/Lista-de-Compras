@@ -130,6 +130,11 @@
   justify-content: space-between;
 }
 
+.table-content li{
+  display: flex;
+  align-items: center;
+}
+
 .table-result {
   z-index: 0;
   display: flex;
