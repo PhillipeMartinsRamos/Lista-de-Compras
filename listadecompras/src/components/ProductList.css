@@ -115,7 +115,7 @@
 .table-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   z-index: 2;
   position: relative;
 }
