@@ -30,6 +30,10 @@
   animation: list-row 0.5s ease;
 }
 
+.list-row li{
+  align-items: center;
+}
+
 .name {
   box-sizing: border-box;
   width: 30%;
