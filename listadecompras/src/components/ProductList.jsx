@@ -18,7 +18,7 @@ const ProductList = ({ productList, handleDelete }) => {
             className="
             price"
           >
-            €/Unid
+            preço
           </li>
           <li
             className="
@@ -50,7 +50,7 @@ const ProductList = ({ productList, handleDelete }) => {
                 className="
             price"
               >
-                {item.price}
+                € {item.price}
               </li>
               <li
                 className="
@@ -79,7 +79,7 @@ const ProductList = ({ productList, handleDelete }) => {
         })}
       </div>
       <div className="table-result">
-        <h2>Valor Total:</h2>
+        <h2>Preço Total:</h2>
         <p>€ {total.toFixed(2)}</p>
       </div>
     </div>

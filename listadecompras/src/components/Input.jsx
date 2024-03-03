@@ -24,6 +24,22 @@ const Input = ({
             required
           />
         </label>
+        <label className="label-value">
+          Preço(€):
+          <input
+            type="text"
+            name="price"
+            onChange={(e) => {
+              let regex = /^[0-9]*([.,][0-9]{0,2})?$/; // define uma expressão regular para números com até 2 casas decimais
+              if (regex.test(e.target.value)) {
+                // verifica se o valor não corresponde à expressão regular
+                setPrice(e.target.value.replace(/[^0-9,.]/g, "")); // remove os caracteres inválidos // atualiza o valor do input
+              }
+            }}
+            value={price}
+            required
+          />
+        </label>
         <label className="label-quantity">
           quantidade:
           <input
@@ -37,22 +53,6 @@ const Input = ({
               }
             }}
             value={qty}
-            required
-          />
-        </label>
-        <label className="label-value">
-          valor:
-          <input
-            type="text"
-            name="price"
-            onChange={(e) => {
-              let regex = /^[0-9]*([.,][0-9]{0,2})?$/; // define uma expressão regular para números com até 2 casas decimais
-              if (regex.test(e.target.value)) {
-                // verifica se o valor não corresponde à expressão regular
-                setPrice(e.target.value.replace(/[^0-9,.]/g, "")); // remove os caracteres inválidos // atualiza o valor do input
-              }
-            }}
-            value={price}
             required
           />
         </label>
