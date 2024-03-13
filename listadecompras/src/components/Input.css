@@ -11,10 +11,21 @@
   
 }
 .form {
+  left: calc(50% - 45vw);
+  width: 90vw;
+  box-sizing: border-box;
+  position:fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   /* animation: form 0.5s ease; */
 }
 
@@ -124,4 +135,41 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+.btn-add-item{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 32px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
+  background-color: red;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-add-item:hover{
+  transform: scale(110%);
+}
+
+.btn-fechar-input{
+  width: 35px;
+  height: 35px;
+  background-color: darkgoldenrod;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  top: -10px;
+}
+
+.input-title{
+  color: white;
+  margin: 10px 0;
 }
