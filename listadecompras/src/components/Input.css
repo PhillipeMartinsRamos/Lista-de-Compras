@@ -1,21 +1,48 @@
-@keyframes form {
+@keyframes anim_start-form {
   0%{
     opacity: 0%;
-    
-  }
-
-  50%{
-    opacity: 0%;
-    transform: rotate3d(0, 1, 0, 90deg);
+    transform: translateY(100px) scaleY(50%);
   }
   
 }
+
+
+@keyframes anim_start-input{
+  0%{
+    opacity: 0;
+    transform: scale(50%)
+  }
+}
+
+@keyframes anim_start-button{
+  0%{
+    opacity: 0%;
+    transform: scale(130%) translateY(-100px);
+  }
+}
+
+.titulo-form{
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .form {
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 90vw;
+  left: 5vw;
+  padding: 20px;
+  border-radius: 15px;
+  z-index: 3;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* animation: form 0.5s ease; */
+  animation: anim_start-form 0.5s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .form label {
@@ -43,12 +70,7 @@ input[type="number"] {
   font-size: 24px !important;
 }
 
-@keyframes button{
-  0%{
-    opacity: 0%;
-    transform: scale(130%) translateY(-100px);
-  }
-}
+
 
 .button {
   margin-top: 10px;
@@ -60,27 +82,22 @@ input[type="number"] {
   font-weight: 600;
   border: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  animation: button 1s ease;
+  animation: anim_start-button 0.5s ease;
 }
 
 .button:active{
   transform: scale(95%);
 }
 
-@keyframes inputs{
-  0%{
-    opacity: 0;
-    transform: scale(50%)
-  }
-}
+
 
 .label-item{
-  animation: inputs 0.33s ease;
+  animation: anim_start-input 0.33s ease;
 
 }
 
 .label-quantity{
-  animation: inputs 0.66s ease;
+  animation: anim_start-input 0.44s ease;
 }
 
 .label-item,
@@ -107,7 +124,7 @@ input[type="number"] {
     border-radius: 15px;
     color: #ac5151;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-    animation: inputs 1s ease;
+    animation: anim_start-input 0.55s ease;
   }
 
   /* .label-value::before {
@@ -124,4 +141,31 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.btn-add-item{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #d47739;
+  color: white;
+  border: none;
+  font-size: 40px;
+  line-height: 40px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-close-form{
+  width: 35px;
+  height: 35px;
+  background-color: chocolate;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: -10px;
+  z-index: 3;
 }
