@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ProductList.css";
 
-const ProductList = ({ productList, handleDelete, handleEdit, setIsOpened, setItem, setPrice, setQty, setTipo, setEditId }) => {
+const ProductList = ({ productList, handleDelete }) => {
   let total = 0;
 
   return (
@@ -39,19 +39,7 @@ const ProductList = ({ productList, handleDelete, handleEdit, setIsOpened, setIt
         {productList.map((item) => {
           total += item.qty * item.price;
           return (
-            <ul
-              key={item.id}
-              className="list-row"
-
-              onDoubleClick={() => {
-                setIsOpened(true);
-                setTipo("edit");
-                setItem(item.item);
-                setPrice(item.price);
-                setQty(item.qty);
-                setEditId(item.id)
-              }}
-            >
+            <ul key={item.id} className="list-row">
               <li
                 className="
             name"
@@ -79,9 +67,8 @@ const ProductList = ({ productList, handleDelete, handleEdit, setIsOpened, setIt
               <li className="delete">
                 <button
                   onClick={(e) => {
-                    e.target.parentNode.parentNode.className =
-                      "list-row-deleted";
-                    setTimeout(() => handleDelete(item.id), 400);
+                    e.target.parentNode.parentNode.className = "list-row-deleted"
+                    setTimeout(() => handleDelete(item.id), 400)
                   }}
                 >
                   x
