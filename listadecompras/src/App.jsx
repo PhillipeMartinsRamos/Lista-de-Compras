@@ -12,8 +12,6 @@ function App() {
     storedList ? storedList : []
   );
 
-  const [isOpened, setIsOpened] = useState(false)
-
   // verifying changes at the list and sending to localstorage
   useEffect(() => {
     localStorage.setItem("list", JSON.stringify(shoppingList));
@@ -52,8 +50,6 @@ function App() {
     setPrice("");
     setQty("");
 
-    setIsOpened(false)
-
     console.log(addedItems);
   };
 
@@ -64,7 +60,8 @@ function App() {
   return (
     <div className="App">
       <h1 className="title">Lista de Compras</h1>
-      
+      <div className="form-container">
+        {/* aqui ficam os inputs */}
         <Input
           handleSubmit={handleSubmit}
           setItem={setItem}
@@ -73,10 +70,8 @@ function App() {
           item={item}
           price={price}
           qty={qty}
-          isOpened={isOpened}
-          setIsOpened={setIsOpened}
         />
-      
+      </div>
       <div className="list-container">
         {/* aqui fica a lista */}
         {shoppingList && (

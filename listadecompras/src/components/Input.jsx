@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Input.css";
 
 const Input = ({
@@ -6,23 +5,13 @@ const Input = ({
   setItem,
   setPrice,
   setQty,
-  isOpened,
-  setIsOpened,
   item,
   price,
   qty,
 }) => {
-
-
-  
-
   return (
-    <div className="form-container">
-      <button className="btn-add-item" onClick={() => setIsOpened(true)}>+</button>
-        {/* aqui ficam os inputs */}
-      { isOpened && <form className="form" onSubmit={handleSubmit}>
-        <button className="btn-fechar-input" onClick={() => setIsOpened(false)}>x</button>
-        <h2 className="input-title">Adicione um item à lista</h2>
+    <div>
+      <form className="form" onSubmit={handleSubmit}>
         <label className="label-item">
           item:
           <input
@@ -68,7 +57,7 @@ const Input = ({
           />
         </label>
         <input className="button" type="submit" value="adicionar" />
-      </form>}
+      </form>
     </div>
   );
 };

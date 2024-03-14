@@ -139,19 +139,15 @@
 
 
 .table-result {
-  z-index: 2;
-  position: fixed;
+  z-index: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: #eacab7;
-  border-radius: 70px;
-  padding: 10px 20px 10px 20px;
-  bottom: 20px;
-  left: 20px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-
+  border-radius: 15px;
+  padding: 24px 20px 5px 20px;
+  transform: translateY(-15px);
 }
 
 .table-result h2 {
