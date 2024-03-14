@@ -63,3 +63,41 @@
     border-radius: 5px;
     padding: 3px;
 }
+
+.instructions{
+    margin-top: 40px;
+
+}
+
+.instructions ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.instructions p{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+
+.instructions li{
+    background-color: #eacab7;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.index-instructions{
+    font-weight: 600;
+}
+
+.small{
+    transform: scale(70%);
+    margin: 0;
+    opacity: 70%;
+}
+
+.small:hover{
+    transform: scale(70%)
+}

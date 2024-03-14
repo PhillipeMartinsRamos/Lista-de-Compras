@@ -143,7 +143,16 @@ function App() {
       <button className="clearList" onClick={() => setShoppingList([])}>
         Limpar Lista
       </button>
+      <div className="instructions">
+        <p>Instruções de uso</p>
+        <ul>
+          <li><span className="index-instructions">Adicionar produto: </span>Toque no botão ( + ) e insira os valores.</li>
+          <li><span className="index-instructions">Alterar produto: </span>Toque duas vezes na linha correspondente.</li>
+          <li><span className="index-instructions">Excluir produto: </span>Toque no botão ( x ) ao lado do produto a ser excluído.</li>
+          <li><span className="index instructions">Limpar Lista: </span>Toque no botão ( Limpar Lista )</li>
+        </ul>
 
+      </div>
       <p className="footer">Desenvolvido por Alex e Lipe</p>
     </div>
   );
