@@ -1,0 +1,151 @@
+[33mcommit 7ba4400dc298dfa042d923bfb93fd443853d5688[m[33m ([m[1;36mHEAD -> [m[1;32malex[m[33m)[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Thu Mar 14 00:38:38 2024 +0000
+
+    edited
+
+[33mcommit d9a5fc03ee6df3e01fa8d365fb8cd8077780a8a0[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Thu Mar 14 00:38:38 2024 +0000
+
+    Revert "Merge commit '19ddd3b9541340e7a977b3e62c8d88f8f9ea303a'"
+    
+    This reverts commit e64d2af62040dd38d4ba6ae1f9df17fff0c0cc3f, reversing
+    changes made to 39cb46805c9ca5d8cf299e0dc462270e6d9a6921.
+
+[33mcommit 19ddd3b9541340e7a977b3e62c8d88f8f9ea303a[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Wed Mar 13 11:19:10 2024 +0000
+
+    added Edit option
+
+[33mcommit 39cb46805c9ca5d8cf299e0dc462270e6d9a6921[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Sun Mar 3 02:39:10 2024 +0000
+
+    - changed words "valor" to "preço"
+    - swapped inputs position "Preço" <-> "Quantidade"
+    - added padding in cells table
+    - fix some positions list cells
+
+[33mcommit cd3450264acf4bc4ae9c59044ebff040e0bcf664[m
+Author: Alexander <118399889+AlexanderDuarte@users.noreply.github.com>
+Date:   Sat Mar 2 13:14:27 2024 +0000
+
+    Atualizar o ProductList.css
+
+[33mcommit f59f07981126ed728c17e92ed7c7e34e382cb76a[m
+Author: Alexander <118399889+AlexanderDuarte@users.noreply.github.com>
+Date:   Sat Mar 2 12:57:13 2024 +0000
+
+    Atualizar o ProductList.css
+
+[33mcommit 11f69703397f74566b40c7637d33835f75a08b51[m
+Author: Alexander <118399889+AlexanderDuarte@users.noreply.github.com>
+Date:   Sat Mar 2 12:52:14 2024 +0000
+
+    Atualizar o ProductList.css
+
+[33mcommit b309a612f6c8102de4ff724456a46ae16369a707[m
+Author: Alexander <118399889+AlexanderDuarte@users.noreply.github.com>
+Date:   Sat Mar 2 12:43:44 2024 +0000
+
+    ProductList.css
+
+[33mcommit 1001d3879f528a4f582ae7ab31e99d39e503ce91[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Sat Mar 2 04:15:46 2024 +0000
+
+    fixed gap list
+
+[33mcommit efdb5a0f907820b2eb6dd5e98a6f3f7020a5df58[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Sat Mar 2 03:38:01 2024 +0000
+
+    - Changed title size and added footer App.css
+    - Created conditionals to fix some bugs on price App.jsx
+    -Added animation on delete list-row ProductList.css
+    - changed size and padding on list and added separators ProductList.css
+    - added functions to control delete animation
+
+[33mcommit a7fc0b040fdf8c0abbec803c0527de2cfbd6ac9d[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Fri Mar 1 03:42:29 2024 +0000
+
+    Fixed bug when user start a value using comma or dot. now 0 is added
+    Some animations are changed
+
+[33mcommit ebde105a2a33d3d3d3f70fc406088cba00154d28[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Fri Mar 1 03:05:28 2024 +0000
+
+    Fixed using RegEx when user insert NaN in value, or Qty.
+    Now, after comma or dot, user only can add two numbers on value or three numbers on qty Input
+    Added some animations
+
+[33mcommit da14d76f1a691811447aca69405bc28cef8cd691[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Fri Mar 1 01:43:12 2024 +0000
+
+    Fixed bug when user uses comma at value or quantity
+
+[33mcommit 27667e041fe3a9f61084a14a7f6beb05b5384373[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Fri Mar 1 00:53:06 2024 +0000
+
+    make the clearList button prettier :-3
+
+[33mcommit 895344a4998c3584789091697eac6c19a682441c[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Fri Mar 1 00:32:22 2024 +0000
+
+    fixed desing on empty list and add required on inputs
+
+[33mcommit e8480d603cf1637000c8d2213ca56eb2498be447[m
+Author: Alexander <118399889+AlexanderDuarte@users.noreply.github.com>
+Date:   Thu Feb 29 13:28:11 2024 +0000
+
+    Fixed button at App.jsx to refresh list when erased
+
+[33mcommit 87b90f564089ad83fda6f5e9e03376ad3eea86ec[m
+Author: Alexander <118399889+AlexanderDuarte@users.noreply.github.com>
+Date:   Thu Feb 29 13:23:59 2024 +0000
+
+    Add cart icon
+
+[33mcommit 6b312a7e0ae760e77fc882cd88d460de6179ee74[m
+Author: Alexander <118399889+AlexanderDuarte@users.noreply.github.com>
+Date:   Thu Feb 29 12:36:56 2024 +0000
+
+    Changed, Title, icon and Language
+
+[33mcommit 709fe63dcf37abd4e43dc6ec9b366807694b13ed[m
+Author: Lipe Martins Dev <lipe_martins@icloud.com>
+Date:   Thu Feb 29 11:14:01 2024 +0000
+
+    Finishing the logic code
+
+[33mcommit bce4da4eb45d8b089aca88aaa99ec17c5eb6f847[m
+Merge: b545d0b d742a7d
+Author: Lipe Martins Dev <lipe_martins@icloud.com>
+Date:   Thu Feb 29 10:02:11 2024 +0000
+
+    Merge remote-tracking branch 'lista-de-compras/alex'
+
+[33mcommit d742a7d8b778b7b808c3f7e9649997a5c41bdeca[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Thu Feb 29 02:32:30 2024 +0000
+
+    Finished list design and set a temporary test list
+
+[33mcommit b545d0b460826c5626b74bcb004f453777367e9a[m
+Author: AlexanderDuarte <alexbfd@hotmail.com>
+Date:   Thu Feb 29 01:08:31 2024 +0000
+
+    Edit h1
+
+[33mcommit f0e4c200de1b5665044d31f7f8a9e9e385594dfb[m
+Author: Lipe Martins Dev <lipe_martins@icloud.com>
+Date:   Thu Feb 29 00:48:20 2024 +0000
+
+    First commit
