@@ -64,7 +64,6 @@ const Input = ({
                 }
               }}
               value={price}
-              required
             />
           </label>
           <label className="label-quantity">
@@ -80,7 +79,6 @@ const Input = ({
                 }
               }}
               value={qty}
-              required
             />
           </label>
           <input className="button" type="submit" value={tipo === "add" ? "adicionar" : "Salvar edição"} />

@@ -146,12 +146,25 @@ function App() {
       <div className="instructions">
         <p>Instruções de uso</p>
         <ul>
-          <li><span className="index-instructions">Adicionar produto: </span>Toque no botão ( + ) e insira os valores.</li>
-          <li><span className="index-instructions">Alterar produto: </span>Toque duas vezes na linha correspondente.</li>
-          <li><span className="index-instructions">Excluir produto: </span>Toque no botão ( x ) ao lado do produto a ser excluído.</li>
-          <li><span className="index instructions">Limpar Lista: </span>Toque no botão ( Limpar Lista )</li>
+          <li>
+            <span className="index-instructions">Adicionar produto: </span>Toque
+            no botão (<button className="btn-add-inst smallest">+</button>) e insira os
+            valores.
+          </li>
+          <li>
+            <span className="index-instructions">Alterar produto: </span>Toque
+            duas vezes no produto.
+          </li>
+          <li>
+            <span className="index-instructions">Excluir produto: </span>Toque
+            no botão (<button className="btn-delete-inst small">x</button>) ao lado
+            do produto a ser excluído.
+          </li>
+          <li>
+            <span className="index-instructions">Limpar Lista: </span>Toque no
+            botão (<button className="clearList small">Limpar Lista</button>)
+          </li>
         </ul>
-
       </div>
       <p className="footer">Desenvolvido por Alex e Lipe</p>
     </div>
