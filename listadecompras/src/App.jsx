@@ -106,7 +106,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">Lista de Compras</h1>
+      <h1 className="title">Lista de <br/> Compras</h1>
 
       {/* aqui ficam os inputs */}
       <Input

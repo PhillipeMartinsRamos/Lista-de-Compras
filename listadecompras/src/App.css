@@ -21,6 +21,7 @@
     text-transform: lowercase;
     margin-bottom: 20px;
     animation: title 0.5s ease;
+    margin-top: 50px;
 }
 
 .list-container {
