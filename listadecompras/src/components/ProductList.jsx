@@ -74,7 +74,7 @@ const ProductList = ({ productList, handleDelete, handleEdit, setIsOpened, setIt
                 className="
             total"
               >
-                {(item.qty * item.price).toFixed(2)}
+                € {(item.qty * item.price).toFixed(2)}
               </li>
               <li className="delete">
                 <button

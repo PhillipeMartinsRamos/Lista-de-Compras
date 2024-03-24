@@ -33,10 +33,16 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    //dealing with different ways of write price
     let convertedPrice =
       price[0] === "," || price[0] === "."
         ? 0 + price.replace(",", ".")
         : price.replace(",", ".");
+
+    if (convertedPrice === "") {
+      convertedPrice = "0.00";
+    }
+
     if (convertedPrice[convertedPrice.length - 1] === ".") {
       convertedPrice = `${convertedPrice}00`;
     }
@@ -54,7 +60,7 @@ function App() {
       qty:
         qty[0] === "," || qty[0] === "."
           ? 0 + qty.replace(",", ".")
-          : qty.replace(",", "."),
+          : qty.replace(",", ".")
     };
 
     setShoppingList([...shoppingList, addedItems]);
@@ -80,6 +86,10 @@ function App() {
       price[0] === "," || price[0] === "."
         ? 0 + price.replace(",", ".")
         : price.replace(",", ".");
+
+    if (convertedPrice === "") {
+      convertedPrice = "0.00";
+    }
 
     if (convertedPrice[convertedPrice.length - 1] === ".") {
       convertedPrice = `${convertedPrice}00`;
@@ -178,8 +188,13 @@ function App() {
             <h3>Quer mesmo limpar a lista?</h3>
             <p>Após a limpeza da lista, não será possível recuperá-la</p>
             <div className="container-clear-list-buttons">
-              <button className="btn-green" onClick={() => setIsOpenedDelete(false)}>Cancelar</button>
-              <button 
+              <button
+                className="btn-green"
+                onClick={() => setIsOpenedDelete(false)}
+              >
+                Cancelar
+              </button>
+              <button
                 onClick={() => {
                   setShoppingList([]);
                   setIsOpenedDelete(false);

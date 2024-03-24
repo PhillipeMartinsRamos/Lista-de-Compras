@@ -88,7 +88,7 @@ const Input = ({
                 type="text"
                 name="quantity"
                 onChange={(e) => {
-                  let regex = /^[0-9]*([.,][0-9]{0,3})?$/; // define uma expressão regular para números com até 2 casas decimais
+                  let regex = /^[0-9]*([.,][0-9]{0,3})?$/; // define uma expressão regular para números com até 3 casas decimais
                   if (regex.test(e.target.value)) {
                     // verifica se o valor não corresponde à expressão regular
                     setQty(e.target.value.replace(/[^0-9,.]/g, "")); // remove os caracteres inválidos // atualiza o valor do input
