@@ -13,8 +13,10 @@ const Input = ({
   setTipo,
   isOpened,
   setIsOpened,
-  editId
+  editId,
 }) => {
+
+
   return (
     <div className="form-container">
       <button
@@ -23,66 +25,85 @@ const Input = ({
           setIsOpened(true);
           setItem("");
           setPrice("");
-          setQty("")
-          setTipo("add")
+          setQty("");
+          setTipo("add");
         }}
       >
         +
       </button>
       {isOpened && (
-        <form className="form" onSubmit={tipo === "add" ? handleSubmit : (e) => {
-          e.preventDefault()
-          handleEdit(editId)
-        }}>
-          <button className="btn-close-form" onClick={() => setIsOpened(false)}>
-            x
-          </button>
-          {tipo === "add" && <h2 className="titulo-form">Adicionar produto</h2>}
-          {tipo === "edit" && <h2 className="titulo-form">Editar produto</h2>}
-          <label className="label-item">
-            item:
+        <div className="container-form">
+          <form
+            className="form"
+            onSubmit={
+              tipo === "add"
+                ? handleSubmit
+                : (e) => {
+                    e.preventDefault();
+                    handleEdit(editId);
+                  }
+            }
+          >
+            <button
+              className="btn-close-form"
+              onClick={() => setIsOpened(false)}
+            >
+              x
+            </button>
+            {tipo === "add" && (
+              <h2 className="titulo-form">Adicionar produto</h2>
+            )}
+            {tipo === "edit" && <h2 className="titulo-form">Editar produto</h2>}
+            <label className="label-item">
+              item:
+              <input
+                type="text"
+                name="item"
+                onChange={(e) => {
+                  setItem(e.target.value);
+                }}
+                value={item}
+                autoFocus
+                required
+              />
+            </label>
+            <label className="label-value">
+              Preço(€):
+              <input
+                type="text"
+                name="price"
+                onChange={(e) => {
+                  let regex = /^[0-9]*([.,][0-9]{0,2})?$/; // define uma expressão regular para números com até 2 casas decimais
+                  if (regex.test(e.target.value)) {
+                    // verifica se o valor não corresponde à expressão regular
+                    setPrice(e.target.value.replace(/[^0-9,.]/g, "")); // remove os caracteres inválidos // atualiza o valor do input
+                  }
+                }}
+                value={price}
+              />
+            </label>
+            <label className="label-quantity">
+              quantidade:
+              <input
+                type="text"
+                name="quantity"
+                onChange={(e) => {
+                  let regex = /^[0-9]*([.,][0-9]{0,3})?$/; // define uma expressão regular para números com até 2 casas decimais
+                  if (regex.test(e.target.value)) {
+                    // verifica se o valor não corresponde à expressão regular
+                    setQty(e.target.value.replace(/[^0-9,.]/g, "")); // remove os caracteres inválidos // atualiza o valor do input
+                  }
+                }}
+                value={qty}
+              />
+            </label>
             <input
-              type="text"
-              name="item"
-              onChange={(e) => {
-                setItem(e.target.value);
-              }}
-              value={item}
-              required
+              className="button"
+              type="submit"
+              value={tipo === "add" ? "adicionar" : "Salvar edição"}
             />
-          </label>
-          <label className="label-value">
-            Preço(€):
-            <input
-              type="text"
-              name="price"
-              onChange={(e) => {
-                let regex = /^[0-9]*([.,][0-9]{0,2})?$/; // define uma expressão regular para números com até 2 casas decimais
-                if (regex.test(e.target.value)) {
-                  // verifica se o valor não corresponde à expressão regular
-                  setPrice(e.target.value.replace(/[^0-9,.]/g, "")); // remove os caracteres inválidos // atualiza o valor do input
-                }
-              }}
-              value={price}
-            />
-          </label>
-          <label className="label-quantity">
-            quantidade:
-            <input
-              type="text"
-              name="quantity"
-              onChange={(e) => {
-                let regex = /^[0-9]*([.,][0-9]{0,3})?$/; // define uma expressão regular para números com até 2 casas decimais
-                if (regex.test(e.target.value)) {
-                  // verifica se o valor não corresponde à expressão regular
-                  setQty(e.target.value.replace(/[^0-9,.]/g, "")); // remove os caracteres inválidos // atualiza o valor do input
-                }
-              }}
-              value={qty}
-            />
-          </label>
-          <input className="button" type="submit" value={tipo === "add" ? "adicionar" : "Salvar edição"} />
-        </form>
+          </form>
+        </div>
       )}
     </div>
   );

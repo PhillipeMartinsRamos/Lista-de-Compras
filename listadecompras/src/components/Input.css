@@ -26,20 +26,31 @@
   font-size: 20px;
   font-weight: 700;
 }
+.container-form{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 3;
+}
 
 .form {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color:rgb(255, 255, 255);
   width: 90vw;
   left: 5vw;
   padding: 20px;
   border-radius: 15px;
-  z-index: 3;
-  position: fixed;
+  z-index: 4;
+  position: absolute;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: anim_start-form 0.5s ease;
+  animation: anim_start-form 0.3s ease;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
