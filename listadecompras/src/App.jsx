@@ -186,7 +186,7 @@ function App() {
           <div className="clear-list-screen">
             <GoAlert className="icon-alert" />
             <h3>Quer mesmo limpar a lista?</h3>
-            <p>Após a limpeza da lista, não será possível recuperá-la</p>
+            <p>Após a limpeza, não será possível recuperá-la</p>
             <div className="container-clear-list-buttons">
               <button
                 className="btn-green"
