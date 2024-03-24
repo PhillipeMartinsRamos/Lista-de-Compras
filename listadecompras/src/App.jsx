@@ -58,9 +58,9 @@ function App() {
       item: item,
       price: convertedPrice,
       qty:
-        qty[0] === "," || qty[0] === "."
+        qty === "" ? 0 : (qty[0] === "," || qty[0] === "."
           ? 0 + qty.replace(",", ".")
-          : qty.replace(",", ".")
+          : qty.replace(",", "."))
     };
 
     setShoppingList([...shoppingList, addedItems]);
