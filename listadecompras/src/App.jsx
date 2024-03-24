@@ -3,6 +3,7 @@ import "./App.css";
 import Input from "./components/Input";
 import ProductList from "./components/ProductList";
 import uniqid from "uniqid";
+import { GoAlert } from "react-icons/go";
 
 function App() {
   // getting the stored list from localstorage
@@ -14,6 +15,7 @@ function App() {
 
   // hook that render or not the form
   const [isOpened, setIsOpened] = useState(false);
+  const [isOpenedDelete, setIsOpenedDelete] = useState(false);
 
   // verifying changes at the list and sending to localstorage
   useEffect(() => {
@@ -106,7 +108,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">Lista de <br/> Compras</h1>
+      <h1 className="title">
+        Lista de <br /> Compras
+      </h1>
 
       {/* aqui ficam os inputs */}
       <Input
@@ -140,16 +144,14 @@ function App() {
           />
         )}
       </div>
-      <button className="clearList" onClick={() => setShoppingList([])}>
-        Limpar Lista
-      </button>
+
       <div className="instructions">
         <p>Instruções de uso</p>
         <ul>
           <li>
             <span className="index-instructions">Adicionar produto: </span>Toque
-            no botão (<button className="btn-add-inst smallest">+</button>) e insira os
-            valores.
+            no botão (<button className="btn-add-inst smallest">+</button>) e
+            insira os valores.
           </li>
           <li>
             <span className="index-instructions">Alterar produto: </span>Toque
@@ -157,8 +159,8 @@ function App() {
           </li>
           <li>
             <span className="index-instructions">Excluir produto: </span>Toque
-            no botão (<button className="btn-delete-inst small">x</button>) ao lado
-            do produto a ser excluído.
+            no botão (<button className="btn-delete-inst small">x</button>) ao
+            lado do produto a ser excluído.
           </li>
           <li>
             <span className="index-instructions">Limpar Lista: </span>Toque no
@@ -166,6 +168,29 @@ function App() {
           </li>
         </ul>
       </div>
+      <button className="clearList" onClick={() => setIsOpenedDelete(true)}>
+        Limpar Lista
+      </button>
+      {isOpenedDelete && (
+        <div className="container-clear-list-screen">
+          <div className="clear-list-screen">
+            <GoAlert className="icon-alert" />
+            <h3>Quer mesmo limpar a lista?</h3>
+            <p>Após a limpeza da lista, não será possível recuperá-la</p>
+            <div className="container-clear-list-buttons">
+              <button className="btn-green" onClick={() => setIsOpenedDelete(false)}>Cancelar</button>
+              <button 
+                onClick={() => {
+                  setShoppingList([]);
+                  setIsOpenedDelete(false);
+                }}
+              >
+                Limpar Lista
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <p className="footer">Desenvolvido por Alex e Lipe</p>
     </div>
   );
