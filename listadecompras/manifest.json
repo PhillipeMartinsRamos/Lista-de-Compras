@@ -1,6 +1,6 @@
 {
   "display": "standalone",
   "name": "Lista de compras by Lipe e Alex",
-  "start_url": "/",
-  ...
+  "start_url": ".",
+  
 }
