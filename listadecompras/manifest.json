@@ -1,7 +1,7 @@
 {
   "name": "Lista de Compras(A e L)",
   "short_name": "Lista de Compras",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
